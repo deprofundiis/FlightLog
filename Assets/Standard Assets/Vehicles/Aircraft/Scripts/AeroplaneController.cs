@@ -37,7 +37,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private float m_OriginalDrag;         // The drag when the scene starts.
         private float m_OriginalAngularDrag;  // The angular drag when the scene starts.
         private float m_AeroFactor;
-        private bool m_Immobilized = false;   // used for making the plane uncontrollable, i.e. if it has been hit or crashed.
+        public bool m_Immobilized = false;   // used for making the plane uncontrollable, i.e. if it has been hit or crashed.
         private float m_BankedTurnAmount;
         private Rigidbody m_Rigidbody;
 	    WheelCollider[] m_WheelColliders;
