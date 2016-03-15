@@ -1797,6 +1797,46 @@ Transform:
   - {fileID: 1265032189}
   m_Father: {fileID: 772734357}
   m_RootOrder: 4
+--- !u!1 &55825178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 55825180}
+  - 114: {fileID: 55825179}
+  m_Layer: 8
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &55825179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55825178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b928cbc27ec8a4377acc04ad0422d40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+--- !u!4 &55825180
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55825178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1 &72470309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,7 +1859,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72470309}
   m_LocalRotation: {x: 0, y: -0.5000002, z: 0, w: 0.8660253}
-  m_LocalPosition: {x: -864.8, y: 216.1839, z: 2055.5}
+  m_LocalPosition: {x: -876, y: 216.1839, z: 2036}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -1854,21 +1894,21 @@ MonoBehaviour:
   waypointList:
     circuit: {fileID: 107893879}
     items:
-    - {fileID: 899960689}
-    - {fileID: 767129997}
-    - {fileID: 988905070}
-    - {fileID: 1313361463}
-    - {fileID: 862953824}
-    - {fileID: 1991006310}
-    - {fileID: 72470310}
     - {fileID: 1738137862}
+    - {fileID: 1586790937}
+    - {fileID: 72470310}
+    - {fileID: 1313361463}
+    - {fileID: 1662140478}
     - {fileID: 1614011714}
     - {fileID: 441256019}
-    - {fileID: 1231374795}
+    - {fileID: 1991006310}
+    - {fileID: 988905070}
+    - {fileID: 767129997}
     - {fileID: 940041568}
-    - {fileID: 1586790937}
+    - {fileID: 899960689}
     - {fileID: 1873255320}
-    - {fileID: 1662140478}
+    - {fileID: 1231374795}
+    - {fileID: 862953824}
   smoothRoute: 1
   editorVisualisationSubsteps: 100
 --- !u!4 &107893880
@@ -1908,9 +1948,10 @@ GameObject:
   - 4: {fileID: 112941210}
   - 218: {fileID: 112941212}
   - 154: {fileID: 112941211}
+  - 114: {fileID: 112941213}
   m_Layer: 0
   m_Name: Terrain (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1968,6 +2009,36 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &112941213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112941209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
+--- !u!1 &158843073 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 00690c0e075198740bd736a4731c7a90, type: 2}
+  m_PrefabInternal: {fileID: 879540615}
+--- !u!114 &158843078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158843073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &198256007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,7 +2474,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.2
-  far clip plane: 5000
+  far clip plane: 3000
   field of view: 50
   orthographic: 0
   orthographic size: 4.5
@@ -2411,7 +2482,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -2483,12 +2554,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b5ec6153a1d55438228df10fe66844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFog: 0
+  distanceFog: 1
   useRadialDistance: 1
   heightFog: 1
-  height: 9.65
+  height: 9.94
   heightDensity: 1
-  startDistance: 9.84
+  startDistance: 10
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!1 &287505053
 GameObject:
@@ -2965,9 +3036,10 @@ GameObject:
   - 4: {fileID: 397739777}
   - 218: {fileID: 397739779}
   - 154: {fileID: 397739778}
+  - 114: {fileID: 397739780}
   m_Layer: 0
   m_Name: Terrain (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3025,6 +3097,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &397739780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397739776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &408387600
 GameObject:
   m_ObjectHideFlags: 0
@@ -6193,6 +6278,23 @@ Transform:
   - {fileID: 1182473697}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &429329922 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 92718a1040bbb9a4ab571265d9087f2b, type: 2}
+  m_PrefabInternal: {fileID: 1725676354}
+--- !u!114 &429329925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429329922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &441256018
 GameObject:
   m_ObjectHideFlags: 0
@@ -6215,7 +6317,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 441256018}
   m_LocalRotation: {x: 0, y: -0.9914449, z: 0, w: 0.13052633}
-  m_LocalPosition: {x: -2757.1, y: -27.816101, z: 1135.5}
+  m_LocalPosition: {x: -2743.66, y: -27.816101, z: 1131.9}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -6230,9 +6332,10 @@ GameObject:
   - 4: {fileID: 444834791}
   - 218: {fileID: 444834793}
   - 154: {fileID: 444834792}
+  - 114: {fileID: 444834794}
   m_Layer: 0
   m_Name: Terrain (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6290,6 +6393,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &444834794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444834790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &452264306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6489,9 +6605,10 @@ GameObject:
   - 4: {fileID: 505869438}
   - 218: {fileID: 505869440}
   - 154: {fileID: 505869439}
+  - 114: {fileID: 505869441}
   m_Layer: 0
   m_Name: Terrain (13)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6549,6 +6666,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &505869441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505869437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &542209673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6789,9 +6919,10 @@ GameObject:
   - 4: {fileID: 630703594}
   - 218: {fileID: 630703596}
   - 154: {fileID: 630703595}
+  - 114: {fileID: 630703597}
   m_Layer: 0
   m_Name: Terrain (15)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6849,6 +6980,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &630703597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 630703593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &658564483
 GameObject:
   m_ObjectHideFlags: 0
@@ -8827,6 +8971,7 @@ MonoBehaviour:
   m_AirBrakesEffect: 3
   m_ThrottleChangeSpeed: 0.3
   m_DragIncreaseFactor: 0.001
+  m_Immobilized: 0
 --- !u!54 &727222709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8944,9 +9089,10 @@ GameObject:
   - 4: {fileID: 766499704}
   - 218: {fileID: 766499706}
   - 154: {fileID: 766499705}
+  - 114: {fileID: 766499707}
   m_Layer: 0
   m_Name: Terrain (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9004,6 +9150,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &766499707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766499703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!4 &766512321 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400094, guid: 6f7604981ce4c064cbe5284c437c5699, type: 2}
@@ -9030,7 +9189,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 767129996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2714, y: 261.4, z: -1162.0898}
+  m_LocalPosition: {x: -2714, y: 265.96, z: -1162.0898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -9051,7 +9210,7 @@ Transform:
   - {fileID: 339226988}
   - {fileID: 47280742}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &785521983
 GameObject:
   m_ObjectHideFlags: 0
@@ -9190,9 +9349,10 @@ GameObject:
   - 4: {fileID: 823363291}
   - 218: {fileID: 823363293}
   - 154: {fileID: 823363292}
+  - 114: {fileID: 823363294}
   m_Layer: 0
   m_Name: Terrain (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9250,6 +9410,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &823363294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 823363290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &838036429
 GameObject:
   m_ObjectHideFlags: 0
@@ -9490,9 +9663,10 @@ GameObject:
   - 4: {fileID: 867117528}
   - 218: {fileID: 867117530}
   - 154: {fileID: 867117529}
+  - 114: {fileID: 867117531}
   m_Layer: 0
   m_Name: Terrain (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9550,6 +9724,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &867117531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 867117527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1001 &879540615
 Prefab:
   m_ObjectHideFlags: 0
@@ -9588,6 +9775,14 @@ Prefab:
     - target: {fileID: 400008, guid: 00690c0e075198740bd736a4731c7a90, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 00690c0e075198740bd736a4731c7a90, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 00690c0e075198740bd736a4731c7a90, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00690c0e075198740bd736a4731c7a90, type: 2}
@@ -9689,7 +9884,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 899960688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1469.5, y: 466.1839, z: -2143.1}
+  m_LocalPosition: {x: -1469.5, y: 401, z: -2143.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -9704,9 +9899,10 @@ GameObject:
   - 4: {fileID: 906534798}
   - 218: {fileID: 906534800}
   - 154: {fileID: 906534799}
+  - 114: {fileID: 906534801}
   m_Layer: 0
   m_Name: Terrain (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9764,6 +9960,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &906534801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906534797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1001 &909065096
 Prefab:
   m_ObjectHideFlags: 0
@@ -9845,9 +10054,10 @@ GameObject:
   - 4: {fileID: 915208387}
   - 218: {fileID: 915208389}
   - 154: {fileID: 915208388}
+  - 114: {fileID: 915208390}
   m_Layer: 0
   m_Name: Terrain (12)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9905,6 +10115,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &915208390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 915208386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &921248224
 GameObject:
   m_ObjectHideFlags: 0
@@ -10003,7 +10226,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940041567}
   m_LocalRotation: {x: 0, y: -0.92387974, z: 0, w: -0.38268292}
-  m_LocalPosition: {x: -2324.2, y: 543.1839, z: -1917.4}
+  m_LocalPosition: {x: -2324.27, y: 543.1839, z: -1917.47}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -11573,9 +11796,10 @@ GameObject:
   - 4: {fileID: 985494492}
   - 218: {fileID: 985494494}
   - 154: {fileID: 985494493}
+  - 114: {fileID: 985494495}
   m_Layer: 0
   m_Name: Terrain (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11633,6 +11857,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &985494495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985494491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &988905069
 GameObject:
   m_ObjectHideFlags: 0
@@ -12109,6 +12346,23 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e9aa4b7def958e54bad9089e96b5a063, type: 2}
   m_PrefabInternal: {fileID: 2068406267}
+--- !u!1 &1219400013 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100094, guid: 6f7604981ce4c064cbe5284c437c5699, type: 2}
+  m_PrefabInternal: {fileID: 1478919845}
+--- !u!114 &1219400014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1219400013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b297a60c0ddf0ee4dabefaf158fb097d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRollAngle: 80
+  maxPitchAngle: 80
 --- !u!1 &1220925596
 GameObject:
   m_ObjectHideFlags: 0
@@ -12234,7 +12488,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1231374794}
   m_LocalRotation: {x: 0, y: -0.13052873, z: 0, w: -0.9914445}
-  m_LocalPosition: {x: -170.2, y: 57.1839, z: -1352.3}
+  m_LocalPosition: {x: -198.2, y: 57.1839, z: -1344.8}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -12268,8 +12522,10 @@ RectTransform:
   m_Children:
   - {fileID: 1788783075}
   - {fileID: 343498044}
+  - {fileID: 1600839438}
+  - {fileID: 1871934157}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -12480,9 +12736,10 @@ GameObject:
   - 4: {fileID: 1312522839}
   - 218: {fileID: 1312522838}
   - 154: {fileID: 1312522837}
+  - 114: {fileID: 1312522840}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12540,6 +12797,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1173204455}
   m_RootOrder: 0
+--- !u!114 &1312522840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312522836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &1313361462
 GameObject:
   m_ObjectHideFlags: 0
@@ -12562,7 +12832,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1313361462}
   m_LocalRotation: {x: 0, y: -0.7933532, z: 0, w: 0.6087617}
-  m_LocalPosition: {x: -1454.7548, y: 187.1839, z: 2053.3345}
+  m_LocalPosition: {x: -1457, y: 187.1839, z: 2063.1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -12825,7 +13095,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400094, guid: 6f7604981ce4c064cbe5284c437c5699, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 6f7604981ce4c064cbe5284c437c5699, type: 2}
       propertyPath: circuit
@@ -12844,9 +13114,10 @@ GameObject:
   - 4: {fileID: 1479407299}
   - 218: {fileID: 1479407301}
   - 154: {fileID: 1479407300}
+  - 114: {fileID: 1479407302}
   m_Layer: 0
   m_Name: Terrain (14)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12904,6 +13175,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &1479407302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479407298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &1480970490
 GameObject:
   m_ObjectHideFlags: 0
@@ -13211,11 +13495,84 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1586790936}
   m_LocalRotation: {x: 0, y: -0.130526, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -296.5, y: 89.1839, z: 1591.2}
+  m_LocalPosition: {x: -314.6, y: 102.3, z: 1586.7}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
   m_RootOrder: 12
+--- !u!1 &1600839437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1600839438}
+  - 222: {fileID: 1600839440}
+  - 114: {fileID: 1600839439}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1600839438
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600839437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1241316294}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -33.05}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1600839439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600839437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '#Rings: 0'
+--- !u!222 &1600839440
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600839437}
 --- !u!1 &1606986417
 GameObject:
   m_ObjectHideFlags: 0
@@ -13373,7 +13730,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1614011713}
   m_LocalRotation: {x: 0, y: -0.9238795, z: 0, w: 0.38268366}
-  m_LocalPosition: {x: -2480.3, y: 84.2, z: 1616}
+  m_LocalPosition: {x: -2474.09, y: 84.2, z: 1609.79}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -13419,7 +13776,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
       propertyPath: m_LocalScale.x
@@ -13444,6 +13801,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e9aa4b7def958e54bad9089e96b5a063, type: 2}
   m_PrefabInternal: {fileID: 1096643102}
+--- !u!1 &1645367206 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 00690c0e075198740bd736a4731c7a90, type: 2}
+  m_PrefabInternal: {fileID: 879540615}
+--- !u!114 &1645367211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645367206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &1647611272
 GameObject:
   m_ObjectHideFlags: 0
@@ -13454,9 +13828,10 @@ GameObject:
   - 4: {fileID: 1647611273}
   - 218: {fileID: 1647611275}
   - 154: {fileID: 1647611274}
+  - 114: {fileID: 1647611276}
   m_Layer: 0
   m_Name: Terrain (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13514,6 +13889,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &1647611276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647611272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &1648421777
 GameObject:
   m_ObjectHideFlags: 0
@@ -13564,7 +13952,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1662140477}
   m_LocalRotation: {x: 0, y: -0.8660252, z: 0, w: 0.5000005}
-  m_LocalPosition: {x: -1950.3, y: 103.83453, z: 2010.1}
+  m_LocalPosition: {x: -1907, y: 113, z: 1935}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -13625,9 +14013,10 @@ GameObject:
   - 4: {fileID: 1697842829}
   - 218: {fileID: 1697842831}
   - 154: {fileID: 1697842830}
+  - 114: {fileID: 1697842832}
   m_Layer: 0
   m_Name: Terrain (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13685,6 +14074,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &1697842832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697842828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1 &1721460125 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a5be31db3f71b0642af74fe491b4bc89, type: 2}
@@ -13949,8 +14351,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1738137861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68.3, y: -84.6, z: 785}
+  m_LocalRotation: {x: 0.0030288827, y: -0.12879501, z: 0.00039338323, w: 0.99166656}
+  m_LocalPosition: {x: -47.4, y: -70.3, z: 788.9}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -14056,6 +14458,79 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 851d11542d51c464e89acf6875599172, type: 2}
   m_PrefabInternal: {fileID: 2102659619}
+--- !u!1 &1871934156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1871934157}
+  - 222: {fileID: 1871934159}
+  - 114: {fileID: 1871934158}
+  m_Layer: 5
+  m_Name: Crash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1871934157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871934156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1241316294}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1871934158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871934156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You Crashed. Restarting...
+--- !u!222 &1871934159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871934156}
 --- !u!1 &1873255319
 GameObject:
   m_ObjectHideFlags: 0
@@ -14078,7 +14553,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1873255319}
   m_LocalRotation: {x: 0, y: -0.60876274, z: 0, w: -0.7933524}
-  m_LocalPosition: {x: -810.8, y: 297.1839, z: -2107.3}
+  m_LocalPosition: {x: -818.2, y: 297.1839, z: -2079.7}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 107893880}
@@ -14255,7 +14730,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
       propertyPath: m_LocalScale.x
@@ -14685,9 +15160,10 @@ GameObject:
   - 4: {fileID: 2091116811}
   - 218: {fileID: 2091116813}
   - 154: {fileID: 2091116812}
+  - 114: {fileID: 2091116814}
   m_Layer: 0
   m_Name: Terrain (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14745,6 +15221,19 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.1024
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &2091116814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091116810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcb4560f3d8b434e84806db49757300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 128430, guid: 3b394bbe8fe114c4c81bf8b9ef2cb1bf, type: 2}
+  crashText: {fileID: 1871934156}
 --- !u!1001 &2102659619
 Prefab:
   m_ObjectHideFlags: 0

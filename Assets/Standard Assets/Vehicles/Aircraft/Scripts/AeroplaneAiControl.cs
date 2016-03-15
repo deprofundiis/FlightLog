@@ -22,7 +22,8 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private AeroplaneController m_AeroplaneController;  // The aeroplane controller that is used to move the plane
         private float m_RandomPerlin;                       // Used for generating random point on perlin noise so that the plane will wander off path slightly
         private bool m_TakenOff;                            // Has the plane taken off yet
-
+        private float yaw;
+        private float pitch;
 
         // setup script properties
         private void Awake()
@@ -34,6 +35,15 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             m_RandomPerlin = Random.Range(0f, 100f);
         }
 
+        public void Start()
+        {
+          InvokeRepeating("SendFlightLog", 2, 1f);
+        }
+
+        public void SendFlightLog()
+        {
+          Debug.Log("Target Angle Yaw: " + yaw + " Target Angle Pitch: " + pitch);
+        }
 
         // reset the object to sensible values
         public void Reset()
@@ -57,6 +67,9 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
                 Vector3 localTarget = transform.InverseTransformPoint(targetPos);
                 float targetAngleYaw = Mathf.Atan2(localTarget.x, localTarget.z);
                 float targetAnglePitch = -Mathf.Atan2(localTarget.y, localTarget.z);
+
+                yaw = targetAngleYaw;
+                pitch = targetAnglePitch;
 
 
                 // Set the target for the planes pitch, we check later that this has not passed the maximum threshold

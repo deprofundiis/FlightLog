@@ -10,10 +10,24 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         // these max angles are only used on mobile, due to the way pitch and roll input are handled
         public float maxRollAngle = 80;
         public float maxPitchAngle = 80;
+        private float rollInput;
+        private float pitchInput;
+        private AeroplaneAiControl aiScript;
+        private float idleSeconds = 10;
 
         // reference to the aeroplane that we're controlling
         private AeroplaneController m_Aeroplane;
 
+        public void Start()
+        {
+          aiScript = GetComponent<AeroplaneAiControl>();
+          InvokeRepeating("SendFlightLog", 2, 1f);
+        }
+
+        public void SendFlightLog()
+        {
+          Debug.Log("User Input Roll: " + rollInput + " User Input Pitch: " + pitchInput);
+        }
 
         private void Awake()
         {
@@ -28,6 +42,27 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             float roll = CrossPlatformInputManager.GetAxis("Horizontal");
             float pitch = CrossPlatformInputManager.GetAxis("Vertical");
             bool airBrakes = CrossPlatformInputManager.GetButton("Fire1");
+
+            rollInput = roll;
+            pitchInput = pitch;
+
+            if(roll != 0f || pitch != 0)
+            {
+              idleSeconds = 0f;
+            }
+            else
+            {
+              idleSeconds += Time.deltaTime;
+            }
+
+            if(idleSeconds > 10)
+            {
+              aiScript.enabled = true;
+            }
+            else
+            {
+              aiScript.enabled = false;
+            }
 
             // auto throttle up, or down if braking.
             float throttle = airBrakes ? -1 : 1;

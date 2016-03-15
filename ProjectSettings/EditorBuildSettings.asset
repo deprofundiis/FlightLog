@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/FlighlogSetup/Scenes/AircraftJet2Axis.unity
-  - enabled: 1
     path: Assets/FlighlogSetup/Scenes/AircraftJet2AxisAI.unity
+  - enabled: 1
+    path: Assets/FlighlogSetup/Scenes/AircraftJet2Axis.unity
