@@ -27,5 +27,6 @@ public class CameraSwitch : MonoBehaviour
 
         m_CurrentActiveObject = nextactiveobject;
         text.text = objects[m_CurrentActiveObject].name;
+        Debug.Log("Changed Camera to: " + objects[m_CurrentActiveObject].name);
     }
 }

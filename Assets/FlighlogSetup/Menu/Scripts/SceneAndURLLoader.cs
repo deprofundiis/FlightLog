@@ -20,10 +20,16 @@ public class SceneAndURLLoader : MonoBehaviour
 		SceneManager.LoadScene(sceneName);
 	}
 
+  public void SceneLoad(int sceneIndex)
+{
+  //PauseMenu pauseMenu = (PauseMenu)FindObjectOfType(typeof(PauseMenu));
+  m_PauseMenu.MenuOff ();
+  SceneManager.LoadScene(sceneIndex);
+}
+
 
 	public void LoadURL(string url)
 	{
 		Application.OpenURL(url);
 	}
 }
-

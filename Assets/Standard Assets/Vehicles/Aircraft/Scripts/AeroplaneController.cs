@@ -37,7 +37,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private float m_OriginalDrag;         // The drag when the scene starts.
         private float m_OriginalAngularDrag;  // The angular drag when the scene starts.
         private float m_AeroFactor;
-        private bool m_Immobilized = false;   // used for making the plane uncontrollable, i.e. if it has been hit or crashed.
+        public bool m_Immobilized = false;   // used for making the plane uncontrollable, i.e. if it has been hit or crashed.
         private float m_BankedTurnAmount;
         private Rigidbody m_Rigidbody;
 	    WheelCollider[] m_WheelColliders;
@@ -49,6 +49,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             // Store original drag settings, these are modified during flight.
             m_OriginalDrag = m_Rigidbody.drag;
             m_OriginalAngularDrag = m_Rigidbody.angularDrag;
+            InvokeRepeating("SendAltitude", 2, 1f);
 
 			for (int i = 0; i < transform.childCount; i++ )
 			{
@@ -59,6 +60,10 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
 			}
         }
 
+        public void SendAltitude()
+        {
+          Debug.Log("Altitude: " + Altitude);
+        }
 
         public void Move(float rollInput, float pitchInput, float yawInput, float throttleInput, bool airBrakes)
         {
@@ -250,6 +255,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             var ray = new Ray(transform.position - Vector3.up*10, -Vector3.up);
             RaycastHit hit;
             Altitude = Physics.Raycast(ray, out hit) ? hit.distance + 10 : transform.position.y;
+            //Debug.Log("Altitude: " + Altitude);
         }
 
 

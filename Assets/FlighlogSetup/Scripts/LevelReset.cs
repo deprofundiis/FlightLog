@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelReset :MonoBehaviour
 {
-    public void Restart(){
-      Application.LoadLevel(0);
-    }
-
-
-    private void Update()
+    private void Restart()
     {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
